@@ -818,10 +818,8 @@ a {
 /* carousle */
 
 .grid-container{
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
   margin: 0 5%;
-  height: 500px;
+  height: auto;
   margin-top: 50px;
 }
 .carousel-container {
@@ -961,7 +959,7 @@ a {
   gap: 10px;
   bottom: 10px;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 .carousel-controls label {
@@ -976,9 +974,6 @@ a {
 .carousel-controls input[type="radio"] {
   display: none; 
 }
-
-
-
 .carousel-container::-webkit-scrollbar {
   display: none;
 }
@@ -1054,8 +1049,6 @@ a {
       min-width: calc(50%); 
       height: 250px; 
   }
-  
-
   .img-container-xyz{
     object-fit: contain;
     position: relative;
@@ -1118,9 +1111,10 @@ a {
 }
 
 .abc-cards{
-  margin-top: 50px;
+  margin: 0 5%;
   height: 500px;
   background: white;
+ overflow: hidden;
 }
 .popular{
   display: flex;
@@ -1132,4 +1126,21 @@ a {
   font-size: 30px;
   font-weight: 600;
   margin-left: 15px;
+}
+.card2-section{
+  background: white;
+  height: 500px;
+  display: flex;
+  min-width: calc(33.33%);
+  gap: 20px;
+}
+@media (max-width:641px) {
+  .card2{
+    min-width: 50%;
+  }
+}
+@media (max-width:398px) {
+  .card2{
+    min-width: 100%;
+  }
 }
