@@ -20,16 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function updateRadioAfterDrag() {
-        const itemWidth = carouselInner.querySelector('.card').offsetWidth;
-        const maxScrollLeft = carouselContainer.scrollWidth - carouselContainer.clientWidth;
-        let index = Math.round(carouselContainer.scrollLeft / itemWidth);
-
-        // Adjust the index if the user scrolled to the maximum right
-        if (carouselContainer.scrollLeft >= maxScrollLeft) {
-            index = radios.length - 1;
-        }
-
+    function updateRadioAfterDrag(index) {
         radios[index].checked = true;
         updateCarousel();
     }
@@ -42,16 +33,31 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const dragEnd = () => {
+        if (!isDragging) return;
         isDragging = false;
         carouselContainer.classList.remove('dragging');
-        updateRadioAfterDrag(); 
+
+        // Snap to the closest card
+        const itemWidth = carouselInner.querySelector('.card').offsetWidth;
+        const walk = scrollLeft - carouselContainer.scrollLeft;
+        let index = Math.round(scrollLeft / itemWidth);
+
+        if (Math.abs(walk) > itemWidth / 2) {
+            index += walk > 0 ? -1 : 1;
+        }
+
+        index = Math.max(0, Math.min(index, radios.length - 1));
+
+        // Snap to the final position
+        carouselContainer.scrollLeft = index * itemWidth;
+        updateRadioAfterDrag(index);
     };
 
     const drag = (e) => {
         if (!isDragging) return;
         e.preventDefault();
         const x = (e.pageX || e.touches[0].pageX) - carouselContainer.offsetLeft;
-        const walk = (x - startX) * 1; 
+        const walk = (x - startX) * 1; // Adjust this factor if needed
         carouselContainer.scrollLeft = scrollLeft - walk;
     };
 
@@ -73,11 +79,9 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCarousel();
 });
 
-
 document.addEventListener('DOMContentLoaded', () => {
     const menuIcon = document.querySelector('.menu-logo');
     const menuDropdown = document.querySelector('.menu-dropdown'); 
-
 
     const updateDropdownVisibility = () => {
         const width = window.innerWidth;
@@ -95,9 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    
     updateDropdownVisibility();
-    
     
     window.addEventListener('resize', updateDropdownVisibility);
 
@@ -111,8 +113,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-
-
-
-
-
