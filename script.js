@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         isDragging = false;
         carouselContainer.classList.remove('dragging');
 
-        // Snap to the closest card
+     
         const itemWidth = carouselInner.querySelector('.card').offsetWidth;
         const walk = scrollLeft - carouselContainer.scrollLeft;
         let index = Math.round(scrollLeft / itemWidth);
@@ -48,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         index = Math.max(0, Math.min(index, radios.length - 1));
 
-        // Snap to the final position
         carouselContainer.scrollLeft = index * itemWidth;
         updateRadioAfterDrag(index);
     };
@@ -57,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!isDragging) return;
         e.preventDefault();
         const x = (e.pageX || e.touches[0].pageX) - carouselContainer.offsetLeft;
-        const walk = (x - startX) * 1; // Adjust this factor if needed
+        const walk = (x - startX) * 1; 
         carouselContainer.scrollLeft = scrollLeft - walk;
     };
 
@@ -113,3 +112,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+const carousel = document.querySelector('.carousel2');
+const labels = document.querySelectorAll('.carousel-controls2 label');
+const radios = document.querySelectorAll('.carousel-controls2 input[type="radio"]');
+
+radios.forEach((radio, index) => {
+    radio.addEventListener('change', () => {
+        const itemWidth = document.querySelector('.card2').offsetWidth;
+        carousel.style.transform = `translateX(-${itemWidth * index}px)`;
+        labels.forEach(lbl => lbl.classList.remove('active'));
+        labels[index].classList.add('active');
+    });
+});
+// const carouselLast = document.querySelector('.Reviews-container-Grid');
+// const labelsLast = document.querySelectorAll('.carousel-controls3 label');
+// const radiosLast = document.querySelectorAll('.carousel-controls3 input[type="radio"]');
+
+// radiosLast.forEach((radio, index) => {
+//     radio.addEventListener('change', () => {
+//         const itemWidth = document.querySelector('.Reviews-container-Grid').offsetWidth;
+//         carouselLast.style.transform = `translateX(-${itemWidth * index}px)`;
+//         labelsLast.forEach(lbl => lbl.classList.remove('active'));
+//         labelsLast[index].classList.add('active');
+//     });
+// });
+
+

@@ -52,19 +52,17 @@
             <h1 class="h1-tag-top">
               India’s #1 Upskilling Platform for Working Professionals
             </h1>
-            <p class="pfor-main-sectionNo">
+            <p class="pfor-main-section">
                 Master real world skills with our domain specialised certification and
                 Degree programs
-            </p>
+              </p>
+
             <div class="img-container">
               <div class="no-img">
                 <img src="data/newHeaderOne.png" alt="img" />
               </div>
             </div>
-            <p class="pfor-main-section">
-              Master real world skills with our domain specialised certification and
-              Degree programs
-            </p>
+           
             <div class="gpt-container">
               <div class="gpt">
                 <img src="data/genAi.png" alt="gpt-img" />
@@ -491,9 +489,13 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                
+                </div>   
             </div>
+            <div class="carousel-controls2">
+                <input type="radio" name="carousel-radio" id="radio1" checked>
+                <input type="radio" name="carousel-radio" id="radio2">
+                <input type="radio" name="carousel-radio" id="radio2">
+              </div>
         </div>
 </div>
 <!-- animation-section -->
@@ -812,6 +814,10 @@
             </div>
         </div>
     </div>
+    <!-- <div class="carousel-controls3">
+        <input type="radio" name="carousel-radio" id="radio1" checked>
+        <input type="radio" name="carousel-radio" id="radio2">
+      </div> -->
  </div>
 
  <!-- From -->
@@ -848,34 +854,33 @@
                     <form>
                         <div class="childContainer">
                             <div class="formlabel">
-                                <input type="text" name="name" required placeholder="Enter your Full Name *">
+                                <input type="text" class="formInput" name="name" required placeholder="Enter your Full Name *">
                             </div>
                             <div class="formlabel">
-                                <input type="text" name="email" required placeholder="Enter your Email *">
+                                <input type="text" class="formInput" name="email" required placeholder="Enter your Email *">
                             </div>
                             <div class="formlabel">
-                                <div id="flag" class="flag"></div>
-                                <input type="tel" id="phone-number" placeholder="+91" oninput="updateFlag()">
+                                <input type="tel" class="formInput" id="phone-number" placeholder="+91" oninput="updateFlag()">
                             </div>
                             <div class="formlabel">
-                                <input type="text" name="email" required placeholder="Enter your Job Title *">
+                                <input type="text" class="formInput" name="email" required placeholder="Enter your Job Title *">
                             </div>
                             <div class="formlabel">
-                                <select name="WorkExperiencs" required id="">
-                                    <option value="" hidden>Select Work Experience *</option>
-                                    <option value="Freshers">Freshers</option>
-                                    <option value="1-3 years">1-3 years</option>
-                                    <option value="2-5 years">2-5 years</option>
-                                    <option value="5-7 years">5-7 years</option>
-                                    <option value="7+ years">7+ years</option>
+                                <select name="WorkExperiencs" class="work" required id="">
+                                    <option class="work"value="" hidden>Select Work Experience *</option>
+                                    <option class="work"value="Freshers">Freshers</option>
+                                    <option class="work"value="1-3 years">1-3 years</option>
+                                    <option class="work"value="2-5 years">2-5 years</option>
+                                    <option class="work"value="5-7 years">5-7 years</option>
+                                    <option class="work"value="7+ years">7+ years</option>
                                 </select>
                             </div>
                             <div class="formlabel">
-                                <select name="paltform" required id="">
-                                    <option value="" hidden>Course Preference *</option>
-                                    <option value="Data Science & AI Courses">Data Science & AI Courses</option>
-                                    <option value="Cloud Computing & DevOps">Cloud Computing & DevOps </option>
-                                    <option value="Master in CS: Data Science and AI">Master in CS: Data Science and AI</option>
+                                <select name="paltform" class="work" required id="">
+                                    <option class="work" value="" hidden>Course Preference *</option>
+                                    <option class="work" value="Data Science & AI Courses">Data Science & AI Courses</option>
+                                    <option class="work" value="Cloud Computing & DevOps">Cloud Computing & DevOps </option>
+                                    <option class="work" value="Master in CS: Data Science and AI">Master in CS: Data Science and AI</option>
 
                                 </select>
                             </div>
