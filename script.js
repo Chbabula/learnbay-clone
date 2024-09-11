@@ -124,17 +124,25 @@ radios.forEach((radio, index) => {
         labels[index].classList.add('active');
     });
 });
-// const carouselLast = document.querySelector('.Reviews-container-Grid');
-// const labelsLast = document.querySelectorAll('.carousel-controls3 label');
-// const radiosLast = document.querySelectorAll('.carousel-controls3 input[type="radio"]');
-
-// radiosLast.forEach((radio, index) => {
-//     radio.addEventListener('change', () => {
-//         const itemWidth = document.querySelector('.Reviews-container-Grid').offsetWidth;
-//         carouselLast.style.transform = `translateX(-${itemWidth * index}px)`;
-//         labelsLast.forEach(lbl => lbl.classList.remove('active'));
-//         labelsLast[index].classList.add('active');
-//     });
-// });
 
 
+let currentSlide = 0;
+const slides = document.querySelectorAll('.Reviews-container-Grid');
+const totalSlides = slides.length;
+
+function showSlide(slideIndex) {
+    if (slideIndex >= totalSlides) {
+        currentSlide = 0;
+    } else if (slideIndex < 0) {
+        currentSlide = totalSlides - 1;
+    } else { 
+        currentSlide = slideIndex;
+    }
+    const offset = -currentSlide * 271; 
+    document.querySelector('.Reviews-container-main').style.transform = `translateX(${offset}px)`;
+}
+
+
+document.querySelectorAll('.carousel-radio-buttons input').forEach((radio, index) => {
+    radio.addEventListener('click', () => showSlide(index));
+});
