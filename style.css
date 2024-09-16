@@ -422,16 +422,17 @@ a {
   gap: 70px;
 }
 .micropaywalpay{
-  margin-top: 10px;
+  margin-top: 1px;
 }
 .micro-paypal-img{
-  height: auto;
+  height: 40px;
   width: 100%;
   object-fit: contain;
 }
 .micro-paypal-img img{
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
 
 .micro-paypal-imgNo{
@@ -441,7 +442,7 @@ a {
 .micro-paypal-imgMobi{
   display: flex;
   flex-direction: row;
-  height: 100%;
+  height: 40px;
   width: fit-content;
   margin: 0 auto;
   gap: 20px;
@@ -486,7 +487,7 @@ a {
 .carousel {
   display: flex;
   flex-direction: row;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease-in-out;
   height: 100%;
   width: 100%;
   gap: 38px;
@@ -635,9 +636,9 @@ a {
   bottom: 10px;
   width: 100%;
   margin-top: 10px;
+  text-align: center;
 }
-
-.carousel-controls label {
+.carousel-controls label{
   display: block;
   width: 10px;
   height: 10px;
@@ -647,21 +648,19 @@ a {
   transition: background-color 0.3s ease;
 }
 
+
+
 .carousel-controls input[type="radio"] {
   display: none;
 }
-
-.carousel-container::-webkit-scrollbar {
+.carousel-container::-webkit-scrollbar{
   display: none;
-
 }
-
-.carousel-container.dragging .card {
+.carousel-container.dragging .card{
   cursor: grab;
   user-select: none;
 }
-
-.carousel-container.dragging {
+.carousel-container.dragging{
   scroll-snap-type: none;
   scroll-behavior: auto;
 }
@@ -670,7 +669,7 @@ a {
 
 .grid-container2 {
   max-width: 1300px;
-  margin: 0 auto;
+  margin: 0 auto;  
   height: auto;
   width: 100%;
 }
@@ -846,8 +845,8 @@ a {
   margin-top: 10px;
 }
 
-.carousel-controls label2 {
-  display: block;
+.carousel-controls2 label {
+  display: none;
   width: 10px;
   height: 10px;
   background-color: #ddd;
@@ -855,21 +854,13 @@ a {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
-.carousel-controls2 input[type="radio"] {
+.carousleNo{
+  display: none;
+}
+.carousel-controls2 input:nth-child(3){
   display: none;
 }
 
-.carousel-container2::-webkit-scrollbar {
-  display: none;
-
-}
-
-.carousel-container2.dragging2 .card2 {
-  cursor: grab;
-  user-select: none;
-
-}
 
 
 
@@ -1017,9 +1008,9 @@ a {
 .project_section_innerBoxs {
   display: grid;
   grid-template-columns: 46% 46%;
-  grid-gap: 70px;
-  gap: 100px;
-  margin: 60px 5px 40px 60px;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 10px 0;
 }
 
 .project_section_innerBox1 {
@@ -1527,12 +1518,9 @@ a {
   max-width: 1300px;
   position: relative;
   margin: 30px auto;
-  padding: 0 50px;
- 
 }
 .carousle4{
   overflow: hidden;
-  width: 100%;
   transition: transform 0.5s ease-in-out; 
   display: flex;
 }
@@ -1541,15 +1529,16 @@ a {
   display: flex;
   flex-direction: row;
   margin: 0 auto;
-  gap: 20px;
-  transition: transform 0.5s ease-in-out; 
-  width: max-content;
+  gap: 25px;
+  transition: transform 0.5s ease-in-out;
+  width: 100%; 
 }
 
 
 
 .Reviews-container-Grid {
-  width: 271px;
+  width: 100%;
+ min-width: calc(21.33%);
   padding: 10px 5px;
   display: flex;
   flex-direction: column;
@@ -1570,7 +1559,7 @@ a {
 }
 
 .Reviews-Paradiv {
-  margin-top: -10px;
+  margin-top: -12px;
   z-index: -1;
   width: 100%;
   height: auto;
@@ -1640,6 +1629,13 @@ a {
   gap: 10px;
   margin-top: 15px;
 }
+.carousel-radio-buttons input:nth-child(3){
+  display: none;
+}
+.carousel-radio-buttons input:nth-child(4){
+  display: none;
+}
+
 .carousel-radio-buttons input[type="radio"] {
   appearance: none;
   width: 15px;
@@ -2208,13 +2204,13 @@ a {
     font-size: 25px;
   }
   .main-home{
-    padding: 30px 50px;
+    padding: 10px 50px;
   }
   .grid-container{
     padding: 0 50px;
   }
   .grid-container2{
-    padding: 30px 50px;
+    padding: 10px 50px;
   }
   .animation-section{
     padding: 0 50px;
@@ -2269,10 +2265,6 @@ a {
 .ctri{
   gap: 90px;
 }
-.project_section_innerBoxs {
-  gap: 85px;
-  margin: 60px 5px 40px 60px;
-}
 .formContainer{
   padding: 0;
   gap: 80px;
@@ -2297,12 +2289,17 @@ a {
     color: #454545;
     padding: 0 10px;
 }
+
 }
 @media (max-width:1140px ) {
   .gethieredAt-contanier {
     grid-template-columns: 46% 46%;
     gap: 80px;
 }
+.micro-paypal{
+  gap: 50px;
+}
+
 .ctri {
   gap: 80px;
 }
@@ -2354,9 +2351,7 @@ a {
   height: auto;
   padding:  0;
 }
-.project_section_innerBoxs {
-  gap: 72px;
-}
+
 
 .enquireImg img{
   height: 100%;
@@ -2523,6 +2518,23 @@ a {
 .enquireChild2 p {
   margin: 20px 0;
   font-size: 17px; 
+}    
+.Reviews-container-main {
+  gap: 1px;
+
+}
+.Reviews-container-Grid{
+ padding: 10px 3px;
+}
+.cardEnd {
+  font-size: 10px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  line-height: 18px;
+  padding: 0 5px;
+}
+.Reviews-ParadivHeader {
+  padding: 0 5px;
 }
 }
 @media (max-width:941px) {
@@ -2588,7 +2600,6 @@ a {
 }
 .project_section_innerBoxs {
   gap: 65px;
-  margin: 25px 5px 40px 60px;
 }
 .enquireImg {
   width: auto;
@@ -2648,6 +2659,17 @@ a {
 .lastGridContainerParaDiv {
   grid-template-columns: 24% 24%;
 }
+.Reviews-container-Grid{
+  min-width: calc(32.33%);
+}
+.Reviews-ParadivHeaderLeft p:nth-child(2) {
+  font-size: 10px;
+}
+
+.Reviews-container-main {
+  gap: 10px;
+}
+
 
 
 }
@@ -2655,6 +2677,9 @@ a {
   .h1-tag-top {
     font-size: 25px;
 }
+.micro-paypal {
+  gap: 30px;
+} 
   .carousel-btn-white{
     font-size: 12px;
   }
@@ -2667,9 +2692,7 @@ a {
   .carousel-btn-blue2{
     font-size: 12px;
   }
-  .project_section_innerBoxs {
-    margin: 25px 5px 40px 60px;
-}
+
 .project_section_h4 {
   font-size: 25px;
 }
@@ -2906,10 +2929,10 @@ margin-top: 10px;
   padding: 0;
 }
 .Reviews-container-Grid {
-  width: 244px;
+  min-width: calc(33%);
   padding: 10px 5px;
-
 }
+
 .Reviews-ParadivHeaderLeft{
   font-size: 12px;
 }
@@ -2922,6 +2945,11 @@ margin-top: 10px;
 .cardEnd{
   font-size: 11px;
 }
+.Reviews-container-main {
+  gap: 4px;
+}
+
+
 
 }
 @media (max-width:746px) {
@@ -3214,6 +3242,19 @@ margin-top: 10px;
 .footerPhone a{
 font-size: 12px;
 }
+.Reviews-ParadivHeader{
+  grid-template-columns: 57% 38%;
+}
+.Reviews-ParadivHeader p:nth-child(2) {
+  font-size: 10px;
+}
+.cardEnd p{
+  font-size: 10px;
+}
+.carousleNo{
+  display: block;
+}
+
 }
 
 @media (max-width:642px) {
@@ -3222,6 +3263,12 @@ font-size: 12px;
 }
 .right-section{
   display: none;
+}
+.whyclup-h3 {
+  font-size: 24px;
+}
+.whyclup-p p{
+  margin-bottom: 10px;
 }
 .img-container {
   display: block;
@@ -3232,7 +3279,7 @@ font-size: 12px;
     display: block;
   }
   .h1-tag-top {
-    font-size: 23px;
+    font-size: 24px;
 }
 .gpt-container {
   margin-top: 0;
@@ -3245,9 +3292,9 @@ font-size: 12px;
 }
 .btn-container {
   align-items: center;
-  width: 150px;
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   gap: 15px;
   margin: 10px auto;
 }
@@ -3269,7 +3316,7 @@ font-size: 12px;
 }
 .micro-paypal-imgNo{
   display: block;
-  height: 50px;
+  height: auto;
   width: fit-content;
 }
 .card {
@@ -3310,9 +3357,10 @@ font-size: 12px;
   text-align: center;
   width: 100%;
 }
-.carousel-controls2 input[type="radio"] {
+
+/* .carousel-controls2 input[type="radio"] {
   display: block;
-}
+} */
 
 .carousel-container2::-webkit-scrollbar {
   display: none;
@@ -3330,6 +3378,7 @@ font-size: 12px;
 }
 .animation-section{
   grid-template-columns: 100%;
+  margin-top: 0;
 }
 .animation-container{
   display: none;
@@ -3384,31 +3433,25 @@ font-size: 12px;
   padding: 0;
 }
 .linkGoo {
-  grid-template-columns: 46% 49%;
-  grid-gap: 21px;
+  grid-template-columns: 40% 40%;
+  grid-gap: 15px;
 }
 .ctriContainer2Img img{
   padding: 0;
 }
-.Reviews-container-main {
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  grid-gap: 2px;
-  overflow-x: hidden;
-  transition: transform 0.5s ease;
 
-}
 .carousel-controls3 label {
   cursor: pointer;
 }
 .Reviews-container-Grid {
-  width: 100%;
-  min-width: 224px;
-  padding: 10px 10px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
+
+  min-width: calc(49%);
+}
+.Reviews-container-main {
+  gap: 9px;
+}
+.carousel-radio-buttons input:nth-child(3){
+  display: block;
 }
 .Reviews-ParadivHeader{
   padding: 0 10px;
@@ -3446,7 +3489,11 @@ font-size: 12px;
 }
 .childContainer {
   grid-template-columns: 46% 46%;
-  gap: 5px;
+  gap: 10px;
+}
+.formContainer{
+  margin: 30px 0;
+  padding: 10px 0;
 }
 .lastGridContainerParaDiv{
   padding: 0 20px;
@@ -3471,6 +3518,8 @@ font-size: 12px;
   grid-template-columns: 100%;
   gap: 0px;
 }
+
+
 }
 
 @media (max-width: 542px) {
@@ -3506,6 +3555,23 @@ font-size: 12px;
 .micro-paypal-imgNo {
   height: 45px;
 }
+.Reviews-ParadivHeader{
+  padding: 0 4px;
+}
+.Reviews-ParadivHeaderLeft {
+  font-size: 10px;
+}
+.Reviews-ParadivHeader p:nth-child(2) {
+  font-size: 8px;
+}
+.cardEnd {
+  font-size: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  line-height: 15px;
+  padding: 0 5px;
+}
+
 }
 
 @media (max-width:442px) {
@@ -3618,7 +3684,7 @@ font-size: 12px;
   padding: 10px 20px;
 }
 .ds_container {
-  padding: 0 20px;
+  padding: 0 20px 10px;
 }
 .paraDiv-bhmsd2 p {
   font-size: 8px;
@@ -3659,8 +3725,9 @@ font-size: 12px;
   padding: 0 20px;
   margin: 20px auto;
 }
-.Reviews-container-Grid{
-  min-width: 275px;
+.Reviews-container-Grid {
+  min-width: calc(100%);
+  padding: 5px 10px;
 }
 .formConainerParaDiv {
   padding: 0 20px;
@@ -3706,8 +3773,42 @@ font-size: 12px;
 .lastGridContainerParaDiv {
   padding: 0;
 }
-}
+.Reviews-ParadivHeaderLeft {
+  font-size: 16px;
 
+}
+.Reviews-ParadivHeader p:nth-child(2) {
+  font-size: 14px;
+}
+.Reviews-ParadivHeaderRight p {
+  font-size: 16px;
+}
+.Reviews-ParadivHeader {
+  padding: 0 15px;
+}
+.cardEnd {
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  line-height: 25px;
+  padding: 0 15px;
+}
+.cardEnd p {
+  font-size: 13px;
+}
+.carousel-radio-buttons{
+  margin-top: 0;
+}
+.micro-paypal-imgMobi{
+  gap: 2px;
+}
+.carousel-radio-buttons input:nth-child(4){
+  display: unset;
+}
+.left-section{
+  padding: 20px 0;
+}
+}
 
 
 /* only-for-nav */
@@ -3744,6 +3845,11 @@ font-size: 12px;
   width: 170px;
 }
 }
+@media (max-width:942px) {
+  .carousel-radio-buttonsNo{
+    display: unset;
+  }
+}
 @media (max-width:842px) {
   .logo {
     width: 150px;
@@ -3768,9 +3874,7 @@ font-size: 12px;
   padding: 8px 8px;
 
 }
-.carousel-radio-buttonsNo{
-  display: unset;
-}
+
 }
 
 
