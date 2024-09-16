@@ -864,6 +864,7 @@ a {
 
 
 
+
 .animation-section {
   display: grid;
   grid-template-columns: 55% 45%;
@@ -1531,7 +1532,8 @@ a {
   margin: 0 auto;
   gap: 25px;
   transition: transform 0.5s ease-in-out;
-  width: 100%; 
+  width: 100%;
+  overflow: hidden; 
 }
 
 
@@ -1653,6 +1655,14 @@ a {
 
 .carousel-radio-buttonsNo{
   display: none;
+}
+.Reviews-container-main.dragging .card{
+  cursor: grab;
+  user-select: none;
+}
+.Reviews-container-main.dragging{
+  scroll-snap-type: none;
+  scroll-behavior: auto;
 }
 /* form-code */
 
